@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+};
+
+body {
+    font-family: 'DM Sans';
+    &.freeze {
+        overflow: hidden;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+span {
+    color: rgb(28, 144, 226);
+}

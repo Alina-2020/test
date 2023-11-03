@@ -1,0 +1,240 @@
+@import url("https://fonts.cdnfonts.com/css/dm-sans");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans";
+}
+body.freeze {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+span {
+  color: rgb(28, 144, 226);
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.header {
+  margin-top: 40px;
+}
+.header-content {
+  display: flex;
+}
+.header-content__logo {
+  position: relative;
+  width: 55px;
+}
+.header-content__logo-triangle__left {
+  width: 0;
+  height: 0;
+  border-top: 46px solid #ea498e;
+  border-right: 46px solid transparent;
+  border-radius: 12px 12px 12px 12px;
+}
+.header-content__logo-triangle__right {
+  width: 0;
+  height: 0;
+  border-bottom: 46px solid rgb(28, 144, 226);
+  border-left: 46px solid transparent;
+  position: absolute;
+  top: 10px;
+  left: -29px;
+  border-radius: 12px 12px 12px 12px;
+  opacity: 0.7;
+}
+.header-logo__title {
+  font-size: 33px;
+  color: black;
+  padding-top: 20px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .header-logo__title {
+    font-size: 34px;
+    margin: 0;
+    color: rgb(28, 144, 226);
+    padding-top: 16px;
+  }
+  .header-logo__title:hover {
+    background-color: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    margin-top: 40px;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-logo__title {
+    padding: 0;
+    color: rgb(28, 144, 226);
+  }
+}
+.content {
+  margin-top: 24px;
+}
+.content-info {
+  display: flex;
+}
+.content-info__wrapper {
+  margin-top: 143px;
+}
+.content-info__wrapper-title {
+  font-size: 16px;
+  color: rgb(28, 144, 226);
+  text-transform: uppercase;
+}
+.content-info__wrapper-title__big {
+  font-size: 50px;
+  font-family: "DM Sans";
+}
+.content-info__text {
+  font-size: 18px;
+}
+.content-info__button {
+  border: solid 1px;
+  padding: 7px 24px;
+  background-color: rgb(28, 144, 226);
+  border-radius: 9px;
+  color: rgb(252, 250, 250);
+  font-size: 22px;
+  margin-top: 32px;
+}
+.content-info__button:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(101, 97, 117, 0.6);
+}
+.content-info__image {
+  background-image: url("/src/img/img-test.png");
+  width: 1730px;
+  height: 809px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  .content {
+    margin: 0;
+  }
+  .content-info {
+    flex-direction: column;
+  }
+  .content-info__wrapper {
+    margin-top: 80px;
+  }
+  .content-info__wrapper-title {
+    text-align: center;
+  }
+  .content-info__wrapper-title__big {
+    font-size: 22px;
+    margin: 24px 6px 0px 6px;
+  }
+  .content-info__button {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+  .content-info__image {
+    width: 270px;
+    height: 255px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .content-info__wrapper-title {
+    font-size: 13px;
+  }
+  .content-info__wrapper-title__big {
+    font-size: 20px;
+  }
+  .content-info__text {
+    font-size: 14px;
+  }
+  .content-info__button {
+    padding: 4px 10px;
+    font-size: 18px;
+  }
+  .content-info__image {
+    width: 270px;
+    height: 255px;
+    align-items: center;
+    margin-right: 140px;
+  }
+}
+.cover {
+  display: none;
+  background: rgb(22, 3, 3);
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+.cover.active {
+  display: block;
+}
+
+.content-info__image-modal {
+  background-image: url("/src/img/img-test2.png");
+  display: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-position: center;
+}
+.content-info__image-modal.active {
+  display: block;
+}
+.content-info__image-modal__close {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e6a5a5;
+  border-radius: 10px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+.content-info__image-modal__close:hover {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .content-info__image-modal {
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

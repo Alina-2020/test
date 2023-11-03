@@ -1,0 +1,128 @@
+.content {
+    margin-top: 24px;
+
+    &-info {
+        display: flex;
+    
+        &__wrapper {
+            margin-top: 143px;
+
+            &-title {
+                font-size: 16px;
+                color: rgb(28, 144, 226);
+                text-transform: uppercase;
+
+                &__big {
+                    font-size: 50px;
+                    font-family: 'DM Sans';
+                }
+            }
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__button {
+            border: solid 1px;
+            padding: 7px 24px;
+            background-color: rgb(28, 144, 226);
+            border-radius: 9px;
+            color: rgb(252, 250, 250);
+            font-size: 22px;
+            margin-top: 32px;
+
+        &:active {
+            box-shadow:
+            inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+            inset 2px 2px 3px rgba(101, 97, 117, 0.6);
+        }
+        }
+
+        &__image {
+            background-image: url('/src/img/img-test.png');
+            width: 1730px;
+            height: 809px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+        }
+        
+    }
+}
+
+
+
+@media(max-width: 600px) {
+    .content {
+        margin: 0;
+
+        &-info {
+            flex-direction: column;
+
+            &__wrapper {
+                margin-top: 80px;
+
+                &-title {
+                    text-align: center;
+
+                    &__big {
+                        font-size: 22px;
+                        margin: 24px 6px 0px 6px;
+                    }
+                  }
+                }
+
+                &__button {
+                    padding: 6px 12px;
+                    font-size: 18px;
+                }
+
+                &__image {
+                    width: 270px;
+                    height: 255px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+  
+
+    @media(max-width: 768px) {
+        .content-info__wrapper-title {
+            font-size: 13px;
+
+            &__big {
+                font-size: 20px;
+            }
+        }
+        
+        .content-info__text {
+            font-size: 14px;
+        }
+        .content-info__button {
+            padding: 4px 10px;
+            font-size: 18px;
+        }
+        .content-info__image {
+            width: 270px;
+            height: 255px;
+            align-items: center;
+            margin-right: 140px;    
+        }
+    }
+
+    .cover {
+        display: none;
+        background: rgb(22, 3, 3);
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+
+        &.active {
+            display: block;
+        }
+    }
